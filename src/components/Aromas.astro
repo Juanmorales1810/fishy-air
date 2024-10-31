@@ -1,0 +1,93 @@
+---
+import ProductCard from "./ProductCard.astro";
+const products = [
+    {
+        title: "Basic Tee",
+        body: "Un tee básico para tu día a día con un precio accesible",
+        href: "#",
+        image1: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+        image2: "https://d22fxaf9t8d39k.cloudfront.net/fc3b2e6debe51e5b177c942923a48124ff9ca1d339975d4ffec8c8c0166142bc51533.jpeg",
+    },
+    {
+        title: "Basic Tee",
+        body: "Un tee básico para tu día a día con un precio accesible",
+        href: "#",
+        image1: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+        image2: "https://d22fxaf9t8d39k.cloudfront.net/fc3b2e6debe51e5b177c942923a48124ff9ca1d339975d4ffec8c8c0166142bc51533.jpeg",
+    },
+    {
+        title: "Basic Tee",
+        body: "Un tee básico para tu día a día con un precio accesible",
+        href: "#",
+        image1: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+        image2: "https://d22fxaf9t8d39k.cloudfront.net/fc3b2e6debe51e5b177c942923a48124ff9ca1d339975d4ffec8c8c0166142bc51533.jpeg",
+    },
+    {
+        title: "Basic Tee",
+        body: "Un tee básico para tu día a día con un precio accesible",
+        href: "#",
+        image1: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+        image2: "https://d22fxaf9t8d39k.cloudfront.net/fc3b2e6debe51e5b177c942923a48124ff9ca1d339975d4ffec8c8c0166142bc51533.jpeg",
+    },
+];
+---
+
+<section class="overflow-hidden py-12">
+    <div
+        class="max-w-5xl mx-auto rounded-2xl overflow-hidden bg-[url(https://trello.com/1/cards/671adc830d8eb2fb0bb27026/attachments/671adc9116b7a06d2b4de6d2/previews/671adc9216b7a06d2b4de74e/download/FISHY_AIR-1.png)] bg-cover bg-top bg-no-repeat"
+    >
+        <div class="bg-black/70 p-8 md:p-12 lg:px-16 lg:py-24">
+            <div class="text-center">
+                <h2
+                    class="text-2xl font-bold text-white sm:text-3xl md:text-6xl"
+                >
+                    Elige tu aventura con Fishy Air
+                </h2>
+
+                <h3
+                    class="hidden max-w-lg mx-auto text-white/90 md:mt-6 md:block md:text-lg md:leading-relaxed font-medium"
+                >
+                    Nuestros aromatizantes están diseñados para transportarte al
+                    mar y a la naturaleza. Cada aroma está inspirado en la brisa
+                    del océano, las olas rompiendo y la serenidad de la pesca en
+                    la costa chilena.
+                </h3>
+
+                <div class="mt-4 sm:mt-8">
+                    <a
+                        href="#"
+                        class="inline-block rounded-full bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
+                    >
+                        Get Yours Today
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+            <header class="text-center">
+                <h2
+                    class="text-xl font-bold text-cyan-400 text-pretty lg:text-6xl"
+                >
+                    Nuestra colección de aromas
+                </h2>
+
+                <p class="mx-auto mt-4 max-w-md text-zinc-200 md:text-xl">
+                    Presentamos 12 variedades de aromatizantes con imágenes de
+                    alta calidad, nombres de cada aroma
+                </p>
+            </header>
+
+            <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                {
+                    products.map((product) => (
+                        <li>
+                            <ProductCard {...product} />
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    </div>
+</section>
